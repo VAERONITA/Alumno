@@ -8,20 +8,28 @@ package Datos;
  *
  * @author VAERON
  */
-public class Carrera {    
+public class Carrera implements Datos.Bean{    
     public Carrera(){
         this.clave=" ";
         this.Nombre=" ";
+        this.siglas=" ";
     }
     public Carrera(String clave,String Nombre){
         setclave(clave);
         setNombre(Nombre);
     }
     
-    
+    private String siglas;
     private String clave;
     private String Nombre;
     
+    
+    public String getsiglas(){
+        return this.clave;
+    }
+    public void setsiglas(String clave){        
+        this.siglas=clave.toUpperCase();
+    }
     public String getclave(){
         return this.clave;
     }

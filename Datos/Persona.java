@@ -8,7 +8,7 @@ package Datos;
  *
  * @author VAERON
  */
-public class Persona {
+public class Persona implements Datos.Bean{
     
     public Persona(){
         this.nombre=" ";

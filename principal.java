@@ -1,4 +1,6 @@
 
+import DAO.AlumnoDAO;
+import DAO.CarreraDAO;
 import Datos.Alumno;
 import javax.swing.JOptionPane;
 
@@ -21,5 +23,10 @@ public class principal {
         Alumno VAERON=new Alumno("Victor Alfonso", "Esparza", "Reyes", "4491541233", "gema", "ISEI", "ingenieria en sistemas estrategicos de informacion", "up100186");
         
         JOptionPane.showMessageDialog(null, "El alumno "+VAERON.getnombre()+" estudia la carrera de "+VAERON.getCarreranom());
+        
+        CarreraDAO carreradao =new CarreraDAO();
+        carreradao.insert(VAERON.getCarrera());
+        AlumnoDAO alumnodao=new AlumnoDAO();
+        alumnodao.insert(VAERON);
     }
 }

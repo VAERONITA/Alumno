@@ -8,7 +8,7 @@ package Datos;
  *
  * @author VAERON
  */
-public class Alumno extends Persona{
+public class Alumno extends Persona implements Datos.Bean{
     private String Matricula;
     private Carrera micarrera;
     
@@ -39,6 +39,9 @@ public class Alumno extends Persona{
     }
     public String getCarreraClave() {
         return this.micarrera.getclave();
+    }
+    public Carrera getCarrera(){
+        return this.micarrera;
     }
 
 }
